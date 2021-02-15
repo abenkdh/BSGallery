@@ -353,7 +353,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onAddPicClick() {
             //第一种方式可通过自定义监听器的方式拿到选择的图片，第二种方式可通过官方的 onActivityResult 的方式拿到选择的图片
 //            InsGallery.openGallery(MainActivity.this, GlideEngine.createGlideEngine(), GlideCacheEngine.createCacheEngine(), mAdapter.getData(), new OnResultCallbackListenerImpl(mAdapter));
-            InsGallery.openGalleryImage(MainActivity.this, GlideEngine.createGlideEngine(), new OnResultCallbackListener() {
+            InsGallery.openGalleryVideo(MainActivity.this, GlideEngine.createGlideEngine(), new OnResultCallbackListener() {
                 @Override
                 public void onResult(List result) {
                     for(int i = 0; i < result.size(); i++){

@@ -233,8 +233,8 @@ public class InstagramPreviewContainer extends FrameLayout {
         FrameLayout.LayoutParams multiLayoutParams = new LayoutParams(ScreenUtils.dip2px(context, 30), ScreenUtils.dip2px(context, 30), Gravity.BOTTOM | Gravity.RIGHT);
         multiLayoutParams.rightMargin = ScreenUtils.dip2px(context, 15);
         multiLayoutParams.bottomMargin = ScreenUtils.dip2px(context, 12);
-        addView(mMultiView, multiLayoutParams);
-        mMultiView.setOnClickListener(v -> setMultiMode(!isMulti));
+       // addView(mMultiView, multiLayoutParams);
+        //mMultiView.setOnClickListener(v -> setMultiMode(!isMulti));
 
         View divider = new View(getContext());
         if (config.instagramSelectionConfig.getCurrentTheme() == InsGallery.THEME_STYLE_DARK) {
@@ -312,9 +312,11 @@ public class InstagramPreviewContainer extends FrameLayout {
     public static float getInstagramAspectRatio(int width, int height) {
         float aspectRatio = 0;
         if (height > width * 1.266f) {
-            aspectRatio = width / (width * 1.266f);
+            Log.d("ABENK : ", "1");
+            aspectRatio = width / (width * 1.8f);
         } else if (width > height * 1.9f) {
             aspectRatio = height * 1.9f / height;
+            Log.d("ABENK : ", "2");
         }
         Log.d("ABENK : ", "" + aspectRatio);
         return aspectRatio;
@@ -456,7 +458,7 @@ public class InstagramPreviewContainer extends FrameLayout {
         int parentHeight = getMeasuredHeight();
 
         float instagramAspectRatio = getInstagramAspectRatio(videoWidth, videoHeight);
-        float targetAspectRatio = videoWidth * 2.0f / videoHeight;
+        float targetAspectRatio = videoWidth * 1.0f / videoHeight;
         float targetAspectRatio2 = videoWidth * 1.0f / videoHeight;
         int height = (int) (parentWidth / targetAspectRatio);
         int height2 = (int) (parentWidth / targetAspectRatio2);
@@ -488,9 +490,6 @@ public class InstagramPreviewContainer extends FrameLayout {
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) mVideoView.getLayoutParams();
         layoutParams.width = adjustWidth;
         layoutParams.height = adjustHeight;
-        Log.d("ABENK : ", "isAspectRatio - " + isAspectRatio);
-        Log.d("ABENK : ", "adjustWidth - " + adjustWidth);
-        Log.d("ABENK : ", "adjustHeight - " + adjustHeight);
         mVideoView.setLayoutParams(layoutParams);
     }
 
