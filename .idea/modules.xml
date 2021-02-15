@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/InsGallery-master.iml" filepath="$PROJECT_DIR$/.idea/modules/InsGallery-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/InsGallery-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/InsGallery-master.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/picture_library/InsGallery-master.picture_library.iml" filepath="$PROJECT_DIR$/.idea/modules/picture_library/InsGallery-master.picture_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ucrop/InsGallery-master.ucrop.iml" filepath="$PROJECT_DIR$/.idea/modules/ucrop/InsGallery-master.ucrop.iml" />
+    </modules>
+  </component>
+</project>
